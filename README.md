@@ -42,16 +42,6 @@ You can start developing by editing the files inside the **app** directory. This
 - **Need a native module Expo Go doesn't include?** Run `npx expo prebuild` to generate the `ios`/`android` folders locally (or build one in the cloud with [EAS Build](https://docs.expo.dev/build/introduction/)), then run a [development build](https://docs.expo.dev/develop/development-builds/introduction/) instead of Expo Go.
 - **File-based routing.** Screens are files under `app/` (via `expo-router`), similar in spirit to Next.js — there's no `<NavigationContainer>`/`Stack.Navigator` to hand-wire like a bare React Native CLI app.
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-yarn reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
 ## Learn more
 
 To learn more about developing your project with Expo, look at the following resources:
