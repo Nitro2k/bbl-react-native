@@ -2,18 +2,28 @@
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
+This project uses [Yarn](https://yarnpkg.com/) (see `packageManager` in [package.json](package.json)) — use `yarn`, not `npm`, so everyone resolves the same dependency tree.
+
 ## Get started
 
 1. Install dependencies
 
    ```bash
-   npm install
+   yarn install
    ```
 
 2. Start the app
 
    ```bash
-   npx expo start
+   yarn start
+   ```
+
+   Or jump straight to a platform:
+
+   ```bash
+   yarn ios      # iOS simulator
+   yarn android  # Android emulator
+   yarn web      # browser
    ```
 
 In the output, you'll find options to open the app in a
@@ -25,12 +35,19 @@ In the output, you'll find options to open the app in a
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
+## New to Expo (coming from React Native CLI)?
+
+- **No `ios`/`android` folders.** This is a managed project — there's no native project checked in (see `/ios` and `/android` in `.gitignore`). Native config lives in [app.json](app.json) instead of `Info.plist`/`build.gradle` directly.
+- **Expo Go vs. development build.** `yarn ios`/`yarn android` open the app in the [Expo Go](https://expo.dev/go) sandbox app — fast, no Xcode/Android Studio build step, but it only supports libraries Expo Go ships with.
+- **Need a native module Expo Go doesn't include?** Run `npx expo prebuild` to generate the `ios`/`android` folders locally (or build one in the cloud with [EAS Build](https://docs.expo.dev/build/introduction/)), then run a [development build](https://docs.expo.dev/develop/development-builds/introduction/) instead of Expo Go.
+- **File-based routing.** Screens are files under `app/` (via `expo-router`), similar in spirit to Next.js — there's no `<NavigationContainer>`/`Stack.Navigator` to hand-wire like a bare React Native CLI app.
+
 ## Get a fresh project
 
 When you're ready, run:
 
 ```bash
-npm run reset-project
+yarn reset-project
 ```
 
 This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
