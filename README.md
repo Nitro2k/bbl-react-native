@@ -2,7 +2,14 @@
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-This project uses [Yarn](https://yarnpkg.com/) (see `packageManager` in [package.json](package.json)) — use `yarn`, not `npm`, so everyone resolves the same dependency tree.
+This project uses [Yarn](https://yarnpkg.com/) (see `packageManager` in [package.json](package.json)) — use `yarn`, not `npm`, so everyone resolves the same dependency tree. Styling is done with [NativeWind](https://www.nativewind.dev/) (Tailwind classes via the `className` prop), not `StyleSheet`.
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) 20.19.x or later
+- [Yarn](https://yarnpkg.com/) — enable via Corepack: `corepack enable`
+- To run on a simulator/emulator: [Xcode](https://developer.apple.com/xcode/) 16.1+ (iOS, macOS only) and/or [Android Studio](https://developer.android.com/studio) (Android)
+- No Xcode/Android Studio? Install the [Expo Go](https://expo.dev/go) app on your phone and scan the QR code from `yarn start` instead — no native tooling required
 
 ## Get started
 
