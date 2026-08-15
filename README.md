@@ -2,6 +2,13 @@
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
+## Why I use Expo instead of React Native CLI :D
+
+The task requirements list React Native, TypeScript, and React Navigation as the stack. this project have all three that it's built on `react-native`, written entirely in TypeScript, and file-based routing (`expo-router`) is layered directly on top of `@react-navigation/native`. Expo is a framework around React Native, not a replacement for it.
+
+I chose Expo (framework) over the React Native CLI by preference, based on experience at a previous company where a bare RN CLI project became difficult to maintain,In last year i was assigned task to upgrading the Android `compileSdk`/`targetSdk` api level to meet minimum require of Google play store and keeping native modules linked correctly was too hardship, and migrating to the New Architecture required significant manual native-side work.
+So for this test, I remember that Expo handles that class of problem for me and (our) (SDK-aligned dependency versions via `expo install`, config-driven native setup via `app.json`), which keeps iteration speed high for an app like this one, for a product list from a mock API, a detail screen, and favorites persisted locally (you say AsyncStorage but i prefer MMKV as i use in previous company that build with c++ for fast response). If native code ever needs hand-editing, `npx expo prebuild` still generates the `ios`/`android` projects on demand (see [New to Expo](#new-to-expo-coming-from-react-native-cli) below).
+
 This project uses [Yarn](https://yarnpkg.com/) (see `packageManager` in [package.json](package.json)) — use `yarn`, not `npm`, so everyone resolves the same dependency tree. Styling is done with [NativeWind](https://www.nativewind.dev/) (Tailwind classes via the `className` prop), not `StyleSheet`.
 
 ## Prerequisites
