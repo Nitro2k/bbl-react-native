@@ -35,6 +35,14 @@ In the output, you'll find options to open the app in a
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
+## Troubleshooting
+
+If the app fails to build or start after pulling new changes (especially after dependency or config updates like Metro/NativeWind), clear the Metro bundler cache before anything else:
+
+```bash
+yarn start --clear
+```
+
 ## New to Expo (coming from React Native CLI)?
 
 - **No `ios`/`android` folders.** This is a managed project — there's no native project checked in (see `/ios` and `/android` in `.gitignore`). Native config lives in [app.json](app.json) instead of `Info.plist`/`build.gradle` directly.
